@@ -31,7 +31,8 @@ module.exports = {
 				night: 'hsl(216, 33%, 16%)'
 			},
 			fontFamily: {
-				sans: ['DIN Pro Cond', ...defaultTheme.fontFamily.sans]
+				display: ['DIN Pro', ...defaultTheme.fontFamily.sans],
+				sans: ['DIN Pro', ...defaultTheme.fontFamily.sans]
 			}
 		},
 		fontSize: {

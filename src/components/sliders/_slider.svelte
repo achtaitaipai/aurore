@@ -42,7 +42,7 @@
                 const fromRight = `clip-path: polygon(${(1 - ease) * 100}% 0%, 100% 0%, 100% 100%, ${(1 - ease) * 100}% 100%)`
                 const fromBottom = `clip-path: polygon(0% ${(1 - ease) * 100}%, 100% ${(1 - ease) * 100}%, 100% 100%, 0% 100%)`
 
-				return direction >= 1 ? fromTop :  fromBottom
+				return direction >= 1 ? fromLeft :  fromRight
 			}
 		};
 	}
@@ -50,6 +50,6 @@
 
 <div class="w-full h-full relative" bind:this={container} on:click={handleClick}>
         {#key current}
-        <img in:fade={{duration:700}} out:fade={{duration:700}}  class="absolute w-full h-full object-cover" {...images[imageIndex]}>
+        <img in:slide={{duration:700, direction: direction}} out:slide={{duration:700, direction:-direction}}  class="absolute w-full h-full object-cover" {...images[imageIndex]}>
         {/key}
 </div>
