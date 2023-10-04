@@ -35,18 +35,18 @@ module.exports = {
 			}
 		},
 		fontSize: {
-			xs: 'clamp(0.3819rem, 0.3651rem + 0.0837vw, 0.43rem)',
-			sm: 'clamp(0.6181rem, 0.5914rem + 0.1337vw, 0.695rem)',
-			base: 'clamp(1rem, 0.9565rem + 0.2174vw, 1.125rem)',
-			lg: 'clamp(1.6181rem, 1.5479rem + 0.3511vw, 1.82rem)',
-			xl: 'clamp(2.6181rem, 2.5044rem + 0.5685vw, 2.945rem)',
-			'2xl': 'clamp(4.2356rem, 4.0515rem + 0.9207vw, 4.765rem)',
-			'3xl': 'clamp(6.8538rem, 6.5559rem + 1.4891vw, 7.71rem)',
-			'4xl': 'clamp(11.0887rem, 10.6066rem + 2.4109vw, 12.475rem)',
-			'5xl': 'clamp(17.9419rem, 17.1617rem + 3.9011vw, 20.185rem)',
-			'6xl': 'clamp(29.03rem, 27.7678rem + 6.3109vw, 32.6588rem)',
-			'7xl': 'clamp(46.9706rem, 44.9285rem + 10.2109vw, 52.8419rem)',
-			'8xl': 'clamp(75.9988rem, 72.6944rem + 16.5217vw, 85.4988rem)'
+			xs: 'clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem)',
+			sm: 'clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem)',
+			base: 'clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem)',
+			lg: 'clamp(1.35rem, 1.2761rem + 0.3696vw, 1.5625rem)',
+			xl: 'clamp(1.62rem, 1.5041rem + 0.5793vw, 1.9531rem)',
+			'2xl': 'clamp(1.9438rem, 1.7707rem + 0.8652vw, 2.4413rem)',
+			'3xl': 'clamp(2.3325rem, 2.0823rem + 1.2511vw, 3.0519rem)',
+			'4xl': 'clamp(2.7994rem, 2.4461rem + 1.7663vw, 3.815rem)',
+			'5xl': 'clamp(3.3594rem, 2.8694rem + 2.45vw, 4.7681rem)',
+			'6xl': 'clamp(4.0313rem, 3.3602rem + 3.3554vw, 5.9606rem)',
+			'7xl': 'clamp(4.8375rem, 3.9286rem + 4.5446vw, 7.4506rem)',
+			'8xl': 'clamp(5.805rem, 4.5848rem + 6.1011vw, 9.3131rem)'
 		}
 	},
 	plugins: []
