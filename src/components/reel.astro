@@ -1,0 +1,19 @@
+---
+interface Props {
+	images: {
+		src: string
+		alt?: string
+	}[]
+}
+const { images } = Astro.props
+---
+
+<ul class="flex h-full snap-x gap-1 overflow-x-auto">
+	{
+		images.map((img) => (
+			<li class=" sticky left-0 h-full shrink-0 basis-auto">
+				<img {...img} class="h-full" />
+			</li>
+		))
+	}
+</ul>

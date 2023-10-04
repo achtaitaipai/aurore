@@ -1,0 +1,45 @@
+---
+export type ImageAspect = 'aspect-square' | 'aspect-portrait' | 'aspect-paysage'
+interface Props {
+	left: {
+		src: string
+		alt?: string
+		aspect: ImageAspect
+	}
+	right?: {
+		src: string
+		alt?: string
+		aspect: ImageAspect
+	}
+}
+
+const { left, right } = Astro.props
+const cols = () => {
+	if (!right) return 'grid-cols-2'
+	if (left.aspect === right.aspect) return 'grid-cols-2'
+	if (left.aspect === 'aspect-paysage') {
+		if (right.aspect === 'aspect-portrait') return 'grid-cols-paysage-portrait'
+		if (right.aspect === 'aspect-square') return 'grid-cols-paysage-square'
+	}
+	if (left.aspect === 'aspect-portrait') {
+		if (right.aspect === 'aspect-square') return 'grid-cols-portrait-square'
+		if (right.aspect === 'aspect-paysage') return 'grid-cols-portrait-paysage'
+	}
+	if (left.aspect === 'aspect-square') {
+		if (right.aspect === 'aspect-paysage') return 'grid-cols-square-paysage'
+		if (right.aspect === 'aspect-portrait') return 'grid-cols-square-portrait'
+	}
+}
+---
+
+<div class:list={['grid h-auto gap-1', cols()]} class="">
+	<a href="" class:list={['block w-full overflow-hidden', left.aspect]}>
+		<img class="h-full max-h-full w-full object-cover" {...left} />
+	</a>{
+		right && (
+			<a href="" class:list={['block w-full overflow-hidden', right.aspect]}>
+				<img class="h-full max-h-full w-full object-cover" {...right} />
+			</a>
+		)
+	}
+</div>

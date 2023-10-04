@@ -1,0 +1,11 @@
+---
+import Header from '../components/header.svelte'
+import Slider from '../components/sliders/index.svelte'
+import Base from '../layouts/base.astro'
+---
+
+<Base>
+	<main class="min-h-withheader">
+		<Slider client:idle />
+	</main>
+</Base>

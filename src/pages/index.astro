@@ -1,0 +1,36 @@
+---
+import Reel from '../components/reel.astro'
+import Base from '../layouts/base.astro'
+---
+
+<Base>
+	<main class="flex min-h-withheader flex-wrap">
+		<div class="h-withheader min-w-[50%] grow-[999] basis-0">
+			<Reel
+				images={[
+					{ src: '/images/7.webp' },
+					{ src: '/images/4.webp' },
+					{ src: '/images/6.webp' },
+					{ src: '/images/5.webp' },
+					{ src: '/images/1.webp' },
+					{ src: '/images/2.webp' },
+					{ src: '/images/3.jpg' }
+				]}
+			/>
+		</div>
+		<div
+			class="flex grow basis-[38.2%] flex-col gap-16 bg-night p-4 text-lg text-cream"
+		>
+			<div>
+				<h1 class="text-l font-bold">AKIO GALLERY</h1>
+				<h2>Alaia Exhibition, 2015</h2>
+			</div>
+			<p class="my-auto max-w-prose">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
+				blanditiis minima, nisi cum mollitia minus atque quisquam totam facere
+				delectus quam velit culpa fugiat, quos natus quidem voluptates eum
+				quasi.
+			</p>
+		</div>
+	</main>
+</Base>
